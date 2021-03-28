@@ -1,0 +1,133 @@
+/* Globals */
+
+:root {
+    --dark-color: #324141;
+    --light-color: #acd1d1;
+    --primary-accent: rgb(236, 236, 109);
+    --secondary-accent: rgb(228, 82, 106);
+    --snake-green: rgb(92, 177, 92);
+    --apple-red: rgb(209, 96, 119);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+
+body {
+    font-family: 'DotGothic16', sans-serif;
+    color: var(--light-color);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+}
+
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+button {
+    font-weight: bolder;
+    letter-spacing: .1em;
+}
+
+.primary-accent {
+    color: var(--primary-accent);
+}
+
+.small {
+    font-size: .8rem;
+    letter-spacing: .12rem;
+}
+
+/* Layout */
+
+body {
+    background-color: var(--dark-color);
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.game-container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    width: 200px;
+    height: 200px;
+    border: solid 2px var(--light-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+}
+
+.snake {
+    background-color: var(--snake-green);
+}
+
+.apple {
+    background-color: var(--apple-red);
+    border-radius: 10px;
+    position: relative;
+}
+
+.apple::after{
+    content:'';
+    background-color: green;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: -4px;
+    right: 0;
+    transform: skew(-10deg, -20deg);
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* button */
+
+button {
+    margin-top: 2em;
+    padding: .7em 1.7em;
+    background-color: var(--light-color);
+    border: 0;
+    border-radius: .5em;
+    font-family: inherit;
+    color: var(--dark-color);
+}
